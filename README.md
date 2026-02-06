@@ -16,6 +16,9 @@ npm run prisma:seed
 npm run dev
 ```
 
+## Demo HTML rápida
+Si quieres abrir una versión estática sin instalar nada, abre `index.html` con doble clic o en el navegador.
+
 ## Variables de entorno
 Crea un `.env` con lo siguiente:
 ```
@@ -87,4 +90,3 @@ X-Webhook-Secret: <secret>
 
 ## Tests (smoke)
 Los tests verifican generadores de call prep, propuesta, formulario y PPTX.
-
