@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClickWay SalesOS (MVP)</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --primary: #0b1220;
+        --accent: #d4af37;
+        --muted: #64748b;
+        --card: #ffffff;
+        --bg: #f8fafc;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--primary);
+      }
+
+      header {
+        background: var(--card);
+        border-bottom: 1px solid #e2e8f0;
+        padding: 24px 32px;
+      }
+
+      header p {
+        margin: 0 0 6px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 24px;
+      }
+
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 32px;
+        display: grid;
+        gap: 24px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 16px;
+      }
+
+      .grid.cols-3 {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .grid.cols-2 {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      }
+
+      .card {
+        background: var(--card);
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        padding: 20px;
+        box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+      }
+
+      h2,
+      h3,
+      h4 {
+        margin: 0 0 12px;
+      }
+
+      p {
+        margin: 0 0 12px;
+        color: var(--primary);
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 18px;
+        color: var(--primary);
+      }
+
+      .muted {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 10px;
+        border-radius: 999px;
+        background: #eef2ff;
+        color: #3730a3;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 16px;
+        border-radius: 10px;
+        border: none;
+        background: var(--primary);
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .cta.secondary {
+        background: #ffffff;
+        color: var(--primary);
+        border: 1px solid #e2e8f0;
+      }
+
+      footer {
+        padding: 24px 32px;
+        color: var(--muted);
+        text-align: center;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <p>ClickWay Marketing · Multi-tenant Sales OS</p>
+      <h1>ClickWay SalesOS (Demo en HTML)</h1>
+    </header>
+    <main>
+      <section class="grid cols-3">
+        <div class="card">
+          <h3>Leads de hoy</h3>
+          <p class="pill">Pendiente</p>
+          <p class="muted">Añade leads desde el webhook para verlos aquí.</p>
+        </div>
+        <div class="card">
+          <h3>Leads sin contactar</h3>
+          <p class="pill">Pendiente</p>
+          <p class="muted">Semáforo SLA en zona horaria Europe/Madrid.</p>
+        </div>
+        <div class="card">
+          <h3>Embudo</h3>
+          <ul>
+            <li>Nuevo — Pendiente</li>
+            <li>Contactado — Pendiente</li>
+            <li>Cualificado — Pendiente</li>
+            <li>Propuesta — Pendiente</li>
+            <li>Negociación — Pendiente</li>
+            <li>Ganado — Pendiente</li>
+            <li>Perdido — Pendiente</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="grid cols-2">
+        <div class="card">
+          <h2>Ficha de lead (demo)</h2>
+          <p><strong>Nombre:</strong> Pendiente</p>
+          <p><strong>Empresa:</strong> Pendiente</p>
+          <p><strong>Ciudad:</strong> Pendiente</p>
+          <p><strong>Estado:</strong> Nuevo</p>
+        </div>
+        <div class="card">
+          <h2>Preparar primera llamada</h2>
+          <p>
+            Resumen de 30s: Validar encaje, objetivos y siguientes pasos sin prometer resultados.
+          </p>
+          <h4>Preguntas sugeridas</h4>
+          <ul>
+            <li>¿Qué objetivo principal queréis conseguir en 90 días?</li>
+            <li>¿Qué canales habéis probado y qué resultados han dado?</li>
+            <li>¿Cómo gestionáis ahora los leads cuando entran?</li>
+            <li>¿Cuál es vuestro presupuesto mensual disponible?</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="grid cols-2">
+        <div class="card">
+          <h2>Propuesta (resumen ejecutivo)</h2>
+          <p>
+            Confirmado: Pendiente · Hipótesis: Pendiente · Pendiente: Pendiente
+          </p>
+          <p class="muted">
+            Si faltan datos, se marcarán como “Pendiente” y se listarán preguntas para afinar el plan.
+          </p>
+        </div>
+        <div class="card">
+          <h2>Acciones rápidas</h2>
+          <p class="muted">En la app real podrás generar PPTX y propuesta desde aquí.</p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a class="cta" href="#">Generar PPTX</a>
+            <a class="cta secondary" href="#">Ver Call Prep</a>
+            <a class="cta secondary" href="#">Ver Propuesta</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      Demo HTML estática. Para la app completa, usa el entorno Next.js descrito en README.
+    </footer>
+  </body>
+</html>
